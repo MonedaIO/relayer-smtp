@@ -36,7 +36,7 @@ pub struct SmtpClient {
 impl SmtpClient {
     pub fn new(config: SmtpConfig) -> Result<Self> {
         let creds = Credentials::new(config.id.clone(), config.password.clone());
-        let transport = AsyncSmtpTransport::<Tokio1Executor>::relay(&config.domain_name)?
+        let transport = AsyncSmtpTransport::<Tokio1Executor>::starttls_relay(&config.domain_name)?
             .credentials(creds)
             .build();
 
