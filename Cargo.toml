@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-relayer-utils = { git = "https://github.com/zkemail/relayer-utils" }
+relayer-utils = { git = "https://github.com/MonedaIO/relayer-utils", rev = "f46dac9cf26e543212b9f590a25a2adbef80394a" }
 anyhow = "1.0"
 tokio = { version = "1", features = ["full"] }
 lettre = { version = "0.10.4", features = ["tokio1", "tokio1-native-tls"] }
